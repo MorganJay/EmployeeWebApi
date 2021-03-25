@@ -12,12 +12,15 @@ namespace EmployeeWebApi.Models
         public int EmployeeId { get; set; }
 
         [StringLength(500)]
+        [Required]
         public string EmployeeName { get; set; }
 
         [StringLength(500)]
+        [Required]
         public string Department { get; set; }
 
         [Column(TypeName = "date")]
+        [Required]
         public DateTime? DateEmployed { get; set; }
 
         //public class EmployeeConfiguration : EntityTypeConfiguration<Employee>

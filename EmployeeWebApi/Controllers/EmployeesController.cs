@@ -36,7 +36,7 @@ namespace EmployeeWebApi.Controllers
         {
             var employee = await _context.Employees.FindAsync(id);
 
-            if (employee == null)
+            if (employee is null)
             {
                 return NotFound();
             }
